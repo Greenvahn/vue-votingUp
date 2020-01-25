@@ -1,32 +1,32 @@
 <template>
     <div class="section">
-      <article class="media">
+      <article v-for="item in information" class="media" v-bind:key="item.id">
         <figure class="media-left">
           <img class="image is-64x64"
-            src="../images/submissions/image-yellow.png">
+            v-bind:src="item.submissionImage">
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
               <strong>
-                <a href="#" class="has-text-info">Yellow Pail</a>
-                <span class="tag is-small">#4</span>
+                <a href="#" class="has-text-info">{{item.title}}</a>
+                <span class="tag is-small">#{{item.id}}</span>
               </strong>
               <br>
-                On-demand sand castle construction expertise.
+               {{item.description}}
               <br>
               <small class="is-size-7">
                 Submitted by:
                 <img class="image is-24x24"
-                  src="../images/avatars/daniel.jpg">
+                  v-bind:src="item.avatar">
               </small>
             </p>
           </div>
         </div>
         <div class="media-right">
           <span class="icon is-small">
-            <i class="fa fa-chevron-up"></i>
-            <strong class="has-text-info">10</strong>
+            <font-awesome-icon icon="chevron-up"></font-awesome-icon>
+            <strong class="has-text-info">{{item.votes}}</strong>
           </span>
         </div>
       </article>
@@ -36,7 +36,12 @@
 <script>
 export default {
   name: 'Article',
-  props: {}
+  props: {
+      information:{
+        type: Array,
+        required: true
+      }
+  }
 }
 </script>
 
