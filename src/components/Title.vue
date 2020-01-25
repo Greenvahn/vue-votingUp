@@ -1,7 +1,7 @@
 
 <template>
   <div class="container">
-    <h2 class="title has-text-centered dividing-header is-1">{{msg}}</h2>
+    <h2 class="title has-text-centered dividing-header is-3">{{msg}}</h2>
   </div>
 </template>
 
@@ -13,5 +13,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.title{
+  margin-top: 35px;
+}
+</style>
 
  

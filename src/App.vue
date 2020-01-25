@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Title msg="Vote the best articles!"></Title>
-    <Article v-bind:information="sortedSubmissions"></Article>
+    <Article 
+    v-bind:information="sortedSubmissions">
+    </Article>
   </div>
 </template>
 

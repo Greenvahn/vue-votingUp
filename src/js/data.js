@@ -36,7 +36,10 @@ export const data = {
         avatar: '../images/avatars/molly.png',
         submissionImage: '../images/submissions/image-aqua.png',
       }
-    ]
+    ],
+    addVote(){
+      this.articles.votes++;
+    }
 }
 
 
